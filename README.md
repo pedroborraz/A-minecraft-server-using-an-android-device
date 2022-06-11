@@ -13,7 +13,7 @@ In termux you will need the following packages:
 - openjdk17
 - wget
 ```sh
-pkg install tmux openjdk17 wget
+pkg install tmux openjdk-17 wget
 pkg update 
 pkg upgrade
 ```
@@ -24,7 +24,7 @@ termux-setup-storage
 ## Using Adaway
 - make sure you have root access through magisk.
 - in magisk settings, enable the option of Systemless Hosts, and restart your smartphone.
-- After restarting, open Adaway and use the root method, give root permission and complete the setup. 
+- after restarting, open Adaway and use the root method, give root permission and complete the setup. 
       
 Now with Adaway installed, go to **preferences > root-based blocker > open hosts file**   
 Add these DNS in the last line:
@@ -34,14 +34,14 @@ Add these DNS in the last line:
 3.136.132.147 tunnel.us.ngrok.com
 54.161.241.46 update.equinox.io
 ```
-> Note: You can change the addresses, just use a website to look up the DNS from those urls.
+> Note: you can change the addresses, just use a website to look up the DNS from those urls.
 ## Setup Ngrok
 Going back to termux, use the command:
 > Note: Be sure of your CPU architecture. If it is arm64 the command will be as follows
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 ```
-> Note: If it is arm the command will be as follows
+> Note: if it is arm the command will be as follows
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz
 ```
