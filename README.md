@@ -37,7 +37,7 @@ Add these DNS in the last line:
 > Note: you can change the addresses, just use a website to look up the DNS from those urls.
 ## Setup Ngrok
 Going back to termux, use the command:
-> Note: Be sure of your CPU architecture. If it is arm64 the command will be as follows
+> Note: be sure of your CPU architecture. If it is arm64 the command will be as follows
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 ```
