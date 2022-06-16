@@ -1,12 +1,14 @@
 # About
 This repository is a guide on how to open a minecraft java server on an android device, with root access.   
 Using Termux to manage the server, Ngrok to share localhost, and Adaway to edit the host file.
-> Note: for good performance I recommend a smartphone with at least 4Gb of ram
 
-## You can find the termux, ngrok and adaway respectively at these links:
+## prerequisites
+- A smartphone with at least 4Gb of ram
+- [Magisk](https://github.com/topjohnwu/Magisk)
 - [Termux](https://github.com/termux/termux-app)
 - [Ngrok](https://ngrok.com/download)
 - [Adaway](https://github.com/AdAway/AdAway)
+- [Minecraftserver.jar](https://www.minecraft.net/en-us/download/server)
 ## Starting
 In termux you will need the following packages:
 - tmux
@@ -27,6 +29,8 @@ termux-setup-storage
 - after restarting, open Adaway and use the root method, give root permission and complete the setup. 
       
 Now with Adaway installed, go to **preferences > root-based blocker > open hosts file**   
+> Note: you will need a text editor with root access      
+
 Add these DNS in the last line:
 ```sh
 8.8.4.4 dns.google.com
@@ -36,12 +40,12 @@ Add these DNS in the last line:
 ```
 > Note: you can change the addresses, just use a website to look up the DNS from those urls.
 ## Setup Ngrok
-Going back to termux, use the command:
-> Note: be sure of your CPU architecture. If it is arm64 the command will be as follows
+Going back to termux:   
+ Be sure of your CPU architecture. If it is arm64 the command will be as follows
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 ```
-> Note: if it is arm the command will be as follows
+If it is arm the command will be as follows
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz
 ```
@@ -55,3 +59,8 @@ Add your ngrok authtoken
 ```
 Ngrok installed
 ## Open minecraft server
+Now with all the steps done, go back to termux and let's use two terminal tabs   
+start tmux:
+```sh
+tmux
+```
