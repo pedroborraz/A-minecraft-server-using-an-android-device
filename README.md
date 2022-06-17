@@ -82,13 +82,13 @@ Start the server with the standard minecraft website command:
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.19.jar nogui
 ```
 1. The server will automatically close for you to accept the EULA terms   
-2. just open the eula.txt file and edit the line containing false to true
+2. Just open the eula.txt file and edit the line containing false to true
 3. Re-enter the command in termux to start the server
 ```sh
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.19.jar nogui
 ```
 Now the server will start correctly
-> Note: You can edit the server.properties file and change the settings to your liking
+> Note: you can edit the server.properties file and change the settings to your liking
 # Joining the server
 Now just get the ip that is in the ngrok tab, in the Forwarding line
 > Example: 0.tcp.sa.ngrok.io:16040
