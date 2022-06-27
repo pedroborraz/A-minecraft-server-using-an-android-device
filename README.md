@@ -7,7 +7,7 @@ Using Termux to manage the server, Ngrok to share localhost, and Magisk to edit 
 - [Magisk](https://github.com/topjohnwu/Magisk)-root solution for android devices
 - [Termux](https://github.com/termux/termux-app)-a terminal for android devices
 - [Ngrok](https://ngrok.com/download)-a solution to share your localhost
-- [Minecraft_server.jar](https://www.minecraft.net/en-us/download/server)-link to download the file to open the server
+- [Minecraft_server.jar](https://www.minecraft.net/en-us/download/server)-file to open the server
 ## Starting
 In termux you will need the following packages:
 - openjdk17
@@ -20,9 +20,9 @@ Permission for termux to access internal and external memory
 ```sh
 termux-setup-storage
 ```
-## Setup Ngrok
-Going back to termux:   
- Be sure of your CPU architecture. If it is arm64 
+## Setup Ngrok   
+Be sure of your CPU architecture.   
+If it is arm64 
 ```sh
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 ```
@@ -39,12 +39,29 @@ Add your ngrok authtoken
 ./ngrok config add-authtoken <token>
 ```
 Ngrok installed
+## Edit hosts file
+In magisk settings enable systemless hosts and restart your smartphone   
+Open termux and give root access permission
+```sh
+su
+```
+```sh
+nano /data/adb/modules/hosts/system/etc/hosts
+```
+Add these lines at the end of the file
+```sh
+8.8.4.4 dns.google.com
+52.217.137.128 s3.amazonaws.com
+3.136.132.147 tunnel.us.ngrok.com
+54.161.241.46 update.equinox.io
+```
+> Note: you can change the ip's, just use a website to look up the ip from those DNS.
 ## Open minecraft server
 Create a folder inside your internal memory and place the server.jar file in it   
 Now with all the steps done, go back to termux
 
 # Joining the server
-Now just get the ip that is in the ngrok tab, in the Forwarding line
+Now just copy the ip that is in the ngrok tab, in the Forwarding line
 > Example: 0.tcp.sa.ngrok.io:16040
 
 You now have a minecraft server open
