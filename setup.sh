@@ -40,7 +40,9 @@ y)
     sleep 2
     echo "if you want to edit your authtoken use nano ~/.config/ngrok/ngrok.yml"
     sleep 1
-    echo "to use ngrok use ngrok command";
+    echo "to use ngrok use ngrok command"
+    sleep 4
+    echo "to continue the setup use the terminal with root access, and use the next script setuproot.sh";
     else
     echo "stopping..."
     fi
