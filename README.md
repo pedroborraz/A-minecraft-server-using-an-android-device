@@ -45,6 +45,7 @@ Open termux and give root access permission
 ```sh
 su
 ```
+Edit the hosts file using text editor
 ```sh
 nano /data/adb/modules/hosts/system/etc/hosts
 ```
